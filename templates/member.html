@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員頁面</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css' integrity='sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="/css/member.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <h2>歡迎光臨，這是會員頁</h2>
+      </nav>
+    </header>
+    <section>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h3>{{ user }}，歡迎登入系統</h3>
+          </div>
+        </div>
+        <div class="row text-center mt-2">
+          <div class="col">
+            <a href="/signout">登出系統</a>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group row d-flex justify-content-center mt-1">
+          <label for="stayMsg" class="col-sm-1 col-form-label text-center">內容</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="stayMsg" name="stayMsg">
+          </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center mt-3">
+          <div class="col-1 text-center">
+            <button type="button" class="btn btn-outline-secondary">送出</button>
+          </div>
+        </div>
+        <hr>
+        <!-- <div class="msgBoard">
+          {% for i in range(0, len)%}
+          <div class="row d-flex justify-content-center mt-1">
+            <div class="col-6 text-start msg">
+              <h4 class="userName">{{ msgs[i][0] }}</h4>
+              <h4 class="userMsg">:&emsp;{{ msgs[i][1] }}</h4>
+              <h4 class="userTime">{{ time[i] }}</h4>
+            </div>
+          </div>
+          {% endfor %}
+        </div> -->
+      </div>
+    </section>
+    <footer></footer>
+  </div>
+
+  <script src="/js/member.js"></script>
+</body>
+</html>
